@@ -7,10 +7,12 @@
 
 #define RED 8
 #define GREEN 7
+#define BLUE 6
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Creamos una instancia del lector
 
 const int NUM_CLIENTES = 2;
+const int vueltas = 10;
 
 byte LecturaUID[4];
 byte Tarjeta[4] = { 0xAA, 0xBC, 0xFB, 0x3F };
@@ -73,6 +75,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(RED, OUTPUT);
   pinMode(GREEN, OUTPUT);
+  pinMode(BLUE, OUTPUT);
 
   while (!Serial)
     ;
@@ -82,6 +85,16 @@ void setup() {
 }
 
 void loop() {
+
+  if (Serial.available() > 0){
+    char input = Serial.read();
+    if (input == 'r'){
+      digitalWrite(BLUE,HIGH);//SIMULAR QUE VAMOS A LEER UNA TARJETA
+      delay(3000);
+      Serial.println("UID GRABADO a DNI ");
+      digitalWrite(BLUE,LOW);
+    }
+  }
 
   if (!mfrc522.PICC_IsNewCardPresent()) {
     return;

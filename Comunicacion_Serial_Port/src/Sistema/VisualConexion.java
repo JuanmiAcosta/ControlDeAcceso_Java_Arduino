@@ -1,14 +1,47 @@
 package Sistema;
 
+import com.panamahitek.ArduinoException;
+import com.panamahitek.PanamaHitek_Arduino;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import jssc.SerialPortEvent;
+import jssc.SerialPortEventListener;
+import jssc.SerialPortException;
 
 public class VisualConexion extends javax.swing.JFrame {
-    
-     Conexion con = Conexion.getInstance(); // Sólo una conexión por el patrón "Singleton"
-    
+
+    //Un Arduino y una conexión (Patrón Singleton)
+    PanamaHitek_Arduino arduino = new PanamaHitek_Arduino();
+    SerialPortEventListener listener = new SerialPortEventListener() {
+        @Override
+        public void serialEvent(SerialPortEvent spe) {
+            try {
+                if (arduino.isMessageAvailable()) {
+                    //Aquí insertamos el UID de la tarjeta en la tabla del cliente con DNI txt_dni.getString();
+                    //Para probar provisionalmente que entramos aquí : 
+                    JOptionPane.showMessageDialog(null, arduino.printMessage()+txt_dni.getText());
+
+                }
+            } catch (ArduinoException | SerialPortException ex) {
+                JOptionPane.showMessageDialog(null, "Error en la conexión serial : " + ex);
+            }
+        }
+    };
+    Conexion con = Conexion.getInstance();
+
     public VisualConexion() {
         initComponents();
-         this.setLocationRelativeTo(null);
+
+        //Configuración Arduino
+        try {
+            //Así podemos mandar y recibir información RX --> RECEPCIÓN TX --> TRANSMITIR de Java a Arduino
+            arduino.arduinoRXTX("COM3", 9600, listener);
+        } catch (ArduinoException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la conexión con el lector : " + ex);
+
+        }
+
+        this.setLocationRelativeTo(null);
         this.setTitle("Ficha cliente");
         setIconImage(new ImageIcon(getClass().getResource("../icon/logo64.png")).getImage());
     }
@@ -37,6 +70,11 @@ public class VisualConexion extends javax.swing.JFrame {
         btn_asignar.setForeground(new java.awt.Color(0, 0, 0));
         btn_asignar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/escritura.png"))); // NOI18N
         btn_asignar.setText("Asignar UID a DNI");
+        btn_asignar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_asignarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn_asignar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 350, 130));
 
         txt_dni.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 18)); // NOI18N
@@ -113,6 +151,15 @@ public class VisualConexion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_asignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_asignarActionPerformed
+        //Mandamos por el puerto serie el caracter "r" para que comience el protocolo de lectura de tarjeta
+        try {
+            arduino.sendData("r");
+        } catch (ArduinoException | SerialPortException ex) {
+            JOptionPane.showMessageDialog(null, "Error en mandar trabajo a la placa : " + ex);
+
+        }
+    }//GEN-LAST:event_btn_asignarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -137,7 +184,6 @@ public class VisualConexion extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(VisualConexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
