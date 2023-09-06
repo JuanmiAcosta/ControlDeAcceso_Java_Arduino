@@ -90,7 +90,7 @@ void loop() {
     char input = Serial.read();
     if (input == 'r'){
       digitalWrite(BLUE,HIGH);//SIMULAR QUE VAMOS A LEER UNA TARJETA
-      delay(3000);
+      delay(5000);
       Serial.println("UID GRABADO a DNI ");
       digitalWrite(BLUE,LOW);
     }
