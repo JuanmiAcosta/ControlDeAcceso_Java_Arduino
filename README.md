@@ -32,10 +32,6 @@ Además en la siguiente imagen se especifican los pines usados en el microcontro
 * Además instala Arduino IDE y pásale el programa al microcontrolador, el cableado debería ser algo así además de un posible servomotor que abra una puerta, leds indicativos, una pantalla LCD con información...
 * Asegúrate de establecer los mismos Baudios (9600) y el mismo puerto (COM3 por ejemplo) tanto en Java como en Arduino.
 
-![Imagen representativa](https://github.com/JuanmiAcosta/JavaApp_Comm_Arduino/blob/main/conexionado.jpg?raw=true)
-
-
-
 
 
 
