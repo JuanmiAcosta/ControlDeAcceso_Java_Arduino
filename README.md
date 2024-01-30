@@ -14,9 +14,7 @@ Este diagrama de actividad resume de manera simple las acciones de los dos progr
 
 Además en la siguiente imagen se especifican los pines usados en el microcontrolador Arduino Nano:
 
-![Imagen representativa](https://github.com/JuanmiAcosta/JavaApp_Comm_Arduino/blob/main/frag_ard.png?raw=true)
-
-La aplicación Java tendrá la única parte "activa" de activar en el microcontrolador la función de asignar el UID de la nueva tarjeta a un cliente.🤔
+![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Pines%20Arduino%20Nano.png?raw=true)
 
 ## Tecnologías utilizadas 🛠️ / Lenguajes de programación 👀
 
@@ -32,6 +30,7 @@ La aplicación Java tendrá la única parte "activa" de activar en el microcontr
 3. Ejecuta el proyecto
 
 * Además instala Arduino IDE y pásale el programa al microcontrolador, el cableado debería ser algo así además de un posible servomotor que abra una puerta, leds indicativos, una pantalla LCD con información...
+* Asegúrate de establecer los mismos Baudios (9600) y el mismo puerto (COM3 por ejemplo) tanto en Java como en Arduino.
 
 ![Imagen representativa](https://github.com/JuanmiAcosta/JavaApp_Comm_Arduino/blob/main/conexionado.jpg?raw=true)
 
