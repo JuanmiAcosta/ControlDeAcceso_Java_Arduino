@@ -10,9 +10,9 @@ Para realizar este control de acceso he necesitado dos dependencias:
 
 Este diagrama de actividad resume de manera simple las acciones de los dos programas:
 
-![Imagen representativa](https://github.com/JuanmiAcosta/JavaApp_Comm_Arduino/blob/main/JavaApp.png?raw=true)
+![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Diagrama%20de%20actividad%20(Rutina%20torno).png?raw=true)
 
-En primer lugar se desarrollará el script que ejecutará en bucle el microcontrolador ( en este caso Arduino UNO ), y se cableará en primera instancia y para hacer pruebas todos los módulos necesarios a una protoboard. Este programa estará en constante comunicación con la aplicación Java que será la encargada de recibir el UID de las tarjetas y corroborar en la base de datos si el cliente tiene una mensualidad, y si esta está activa o no.
+Además en la siguiente imagen se especifican los pines usados en el microcontrolador Arduino Nano:
 
 ![Imagen representativa](https://github.com/JuanmiAcosta/JavaApp_Comm_Arduino/blob/main/frag_ard.png?raw=true)
 
