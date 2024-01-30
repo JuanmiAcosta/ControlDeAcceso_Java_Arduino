@@ -1,6 +1,14 @@
-# JavaApp_Comm_Arduino 📓
+# Control de acceso con Arduino Nano y Java 📓
   
-En esta práctica se probará la comunicación por puerto serie entre una aplicación java, y el microcontrolador Arduino. Esta es la última parte para poder finalizar el desarrollo de una aplicación de gestión de gimnasios. Esta comunicación es esencial para llevar a cabo un control de acceso en los mismos.
+Esta práctica consiste en tener un control de acceso basado en el microcontrolador Arduino Nano y un lector RFID (chip RC522) que se pueda comunicar con una aplicación Java que conlleve una Base de Datos, en este caso relacional.
+
+El programa se divide en dos bloque claros, en la rutina (void loop) del microcontrolador que se encarga de escuchar los comandos de la aplicación ( "j_active" -> abrir el torno por ejemplo ), y en la parte de Java que también se encarga de recibir cierta información del microcontrolador, y además realizar ciertas acciones con la Base de Datos.
+
+Para realizar este control de acceso he necesitado dos dependencias:
+ - mysql-connector-j-8.0.32
+ - PanamaHitek_Arduino-2.8.2
+
+Este diagrama de actividad resume de manera simple las acciones de los dos programas:
 
 ![Imagen representativa](https://github.com/JuanmiAcosta/JavaApp_Comm_Arduino/blob/main/JavaApp.png?raw=true)
 
