@@ -20,13 +20,19 @@ Este diagrama de actividad resume de manera simple las acciones de los dos progr
 
 Además en la siguiente imagen se especifican los pines usados en el microcontrolador Arduino Nano, y un esquemático de las conexiones:
 
-![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Pines%20Arduino%20Nano.png?raw=true)
-<br>
-![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/circuito.png?raw=true)
+<p align="center">
+  <img src="https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Pines%20Arduino%20Nano.png?raw=true" alt="Imagen representativa">
+</p>
+<br/>
+<p align="center">
+  <img src="https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/circuito.png?raw=true" alt="Imagen representativa">
+</p>
 
 Por último recomendar la creación de una PCB para un acabado más profesional, este es un ejemplo pero se puede realizar de diversas maneras:
 
-![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/pcb.png?raw=true)
+<p align="center">
+  <img src="https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/pcb.png?raw=true" alt="Imagen representativa">
+</p>
 
 ## Tecnologías utilizadas 🛠️ / Lenguajes de programación 👀
 
