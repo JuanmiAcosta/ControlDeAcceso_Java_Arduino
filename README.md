@@ -2,9 +2,7 @@
 
 ## Vídeo explicativo del sistema 🥶
 
-:https://youtu.be/Pq_Xorr02ok <br/>
-
-[![Control de acceso](https://img.youtube.com/vi/L4zI7Ux2zNs/0.jpg)](https://www.youtube.com/playlist?list=PLViNbzdNIbHCnlLPp3gz1s_ow3c5wKBfD)
+[![Video Demostrativo](https://img.youtube.com/vi/Pq_Xorr02ok/0.jpg)](https://youtu.be/Pq_Xorr02ok)
   
 Esta práctica consiste en tener un control de acceso basado en el microcontrolador Arduino Nano y un lector RFID (chip RC522) que se pueda comunicar con una aplicación Java que conlleve una Base de Datos, en este caso relacional.
 
@@ -16,7 +14,9 @@ Para realizar este control de acceso he necesitado dos dependencias:
 
 Este diagrama de actividad resume de manera simple las acciones de los dos programas, por un lado los mensajes comenzados en "j" son los que manda Java por puerto serie, y los que empiezan por "c" son los mandados por el microcontrolador:
 
-![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Diagrama%20de%20actividad%20(Rutina%20torno).png?raw=true)
+<p align="center">
+  <img src="https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Diagrama%20de%20actividad%20(Rutina%20torno).png?raw=true" alt="Imagen representativa">
+</p>
 
 Además en la siguiente imagen se especifican los pines usados en el microcontrolador Arduino Nano, y un esquemático de las conexiones:
 
