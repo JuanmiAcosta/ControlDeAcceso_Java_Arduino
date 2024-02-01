@@ -2,7 +2,7 @@
 
 ## Vídeo explicativo del sistema 🥶
 
-[![Video Demostrativo](https://img.youtube.com/vi/Pq_Xorr02ok/0.jpg)](https://youtu.be/Pq_Xorr02ok)
+[![Video Demostrativo](https://img.youtube.com/vi/Pq_Xorr02ok/3.jpg)](https://youtu.be/Pq_Xorr02ok)
   
 Esta práctica consiste en tener un control de acceso basado en el microcontrolador Arduino Nano y un lector RFID (chip RC522) que se pueda comunicar con una aplicación Java que conlleve una Base de Datos, en este caso relacional.
 
