@@ -24,7 +24,7 @@ Además en la siguiente imagen se especifican los pines usados en el microcontro
 
 Por último recomendar la creación de una PCB para un acabado más profesional, este es un ejemplo pero se puede realizar de diversas maneras:
 
-<center>![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/pcb.png?raw=true)</center>
+![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/pcb.png?raw=true)
 
 ## Tecnologías utilizadas 🛠️ / Lenguajes de programación 👀
 
