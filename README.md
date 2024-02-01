@@ -1,8 +1,8 @@
 # Control de acceso con Arduino Nano y Java 📓
 
-## Vídeop explicativo del sistema 🥶
+## Vídeo explicativo del sistema 🥶
 
-
+[![](https://markdown-videos.deta.dev/youtube/NarBox1LkYc)](https://www.youtube.com/watch?v=Pq_Xorr02ok&t=5s)
   
 Esta práctica consiste en tener un control de acceso basado en el microcontrolador Arduino Nano y un lector RFID (chip RC522) que se pueda comunicar con una aplicación Java que conlleve una Base de Datos, en este caso relacional.
 
@@ -20,11 +20,11 @@ Además en la siguiente imagen se especifican los pines usados en el microcontro
 
 ![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Pines%20Arduino%20Nano.png?raw=true)
 <br>
-![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Pines%20Arduino%20Nano.png?raw=true)
+![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/circuito.png?raw=true)
 
 Por último recomendar la creación de una PCB para un acabado más profesional, este es un ejemplo pero se puede realizar de diversas maneras:
 
-![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/Pines%20Arduino%20Nano.png?raw=true)
+![Imagen representativa](https://github.com/JuanmiAcosta/ControlDeAcceso_Java_Arduino/blob/main/pcb.png?raw=true)
 
 ## Tecnologías utilizadas 🛠️ / Lenguajes de programación 👀
 
